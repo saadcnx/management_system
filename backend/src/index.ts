@@ -2,6 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import cookieParser from 'cookie-parser';
+import mongoSanitize from 'express-mongo-sanitize';
 import dotenv from 'dotenv';
 import { connectDB } from './config/db';
 import { logger } from './utils/logger';
@@ -10,6 +11,7 @@ import labRoutes from './modules/lab/lab.routes';
 import userRoutes from './modules/user/user.routes';
 import patientRoutes from './modules/patient/patient.routes';
 import dashboardRoutes from './modules/dashboard/dashboard.routes';
+import { apiLimiter } from './middleware/rateLimiter';
 
 dotenv.config();
 
@@ -23,9 +25,11 @@ app.use(cors({
   origin: process.env.CORS_ORIGIN,
   credentials: true,
 }));
-app.use(express.json());
+app.use(express.json({ limit: '100kb' }));
 app.use(cookieParser());
+app.use(mongoSanitize());
 
+app.use('/api', apiLimiter);
 app.use('/api/auth', authRoutes);
 app.use('/api/labs', labRoutes);
 app.use('/api/users', userRoutes);
