@@ -8,6 +8,7 @@ import { logger } from './utils/logger';
 import authRoutes from './modules/auth/auth.routes';
 import labRoutes from './modules/lab/lab.routes';
 import userRoutes from './modules/user/user.routes';
+import patientRoutes from './modules/patient/patient.routes';
 
 dotenv.config();
 
@@ -27,6 +28,7 @@ app.use(cookieParser());
 app.use('/api/auth', authRoutes);
 app.use('/api/labs', labRoutes);
 app.use('/api/users', userRoutes);
+app.use('/api/patients', patientRoutes);
 
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
