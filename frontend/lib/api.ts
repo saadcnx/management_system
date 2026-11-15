@@ -16,4 +16,14 @@ export const api = {
     if (!res.ok) throw new Error(await res.text());
     return res.json();
   },
+  patch: async (endpoint: string, body: any) => {
+    const res = await fetch(`${API_URL}${endpoint}`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(body),
+      credentials: 'include',
+    });
+    if (!res.ok) throw new Error(await res.text());
+    return res.json();
+  },
 };
