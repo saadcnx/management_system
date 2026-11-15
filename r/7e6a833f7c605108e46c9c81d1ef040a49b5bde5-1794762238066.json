@@ -1,0 +1,49 @@
+{
+  "v": 2,
+  "id": "zc_mwi33i4h_qgu9",
+  "sid": "s_mwi33hz0_1iij",
+  "repo": "saadcnx/management_system",
+  "ts": 1794762238066,
+  "sha": "7e6a833f7c605108e46c9c81d1ef040a49b5bde5",
+  "branch": "main",
+  "delivery": "direct",
+  "msgSubj": "feat(sync): Synchronized 1 file(s) across 1 prompt turn(s)",
+  "msgHash": "bae5e83705ee04ed",
+  "files": [
+    [
+      "docker-compose.yml",
+      "m",
+      "ps",
+      1,
+      0
+    ]
+  ],
+  "sum": {
+    "files": 1,
+    "add": 0,
+    "mod": 1,
+    "del": 0,
+    "src": {
+      "ps": 1
+    }
+  },
+  "warn": {
+    "quarantine": 0,
+    "halluc": 0,
+    "secret": 0,
+    "runtime": 0,
+    "override": false
+  },
+  "safety": {
+    "canary": "8/8",
+    "vault": "persistent"
+  },
+  "base": {
+    "gen": 0,
+    "anc": "T",
+    "race": 0
+  },
+  "verify": 1,
+  "ms": 6164,
+  "hash": "047c54294e5f783c"
+}
