@@ -10,6 +10,14 @@ export function tenantPlugin(schema: Schema) {
     next();
   });
 
+  schema.pre('countDocuments', function (next) {
+    const store = tenantContext.getStore();
+    if (store && store.tenantId) {
+      this.where({ tenantId: store.tenantId });
+    }
+    next();
+  });
+
   schema.pre('save', function (next) {
     const store = tenantContext.getStore();
     if (store && store.tenantId && !(this as any).tenantId) {
