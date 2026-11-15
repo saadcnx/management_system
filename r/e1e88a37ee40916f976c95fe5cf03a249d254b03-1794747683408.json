@@ -1,0 +1,112 @@
+{
+  "v": 2,
+  "id": "zc_mwhufjig_5o9u",
+  "sid": "s_mwhthbob_emnp",
+  "repo": "saadcnx/management_system",
+  "ts": 1794747683408,
+  "sha": "e1e88a37ee40916f976c95fe5cf03a249d254b03",
+  "branch": "main",
+  "delivery": "direct",
+  "msgSubj": "feat(sync): Synchronized 10 file(s) across 2 prompt turn(s)",
+  "msgHash": "4a31c57c77fcad21",
+  "files": [
+    [
+      "frontend/components/ui/sidebar.tsx",
+      "a",
+      "ai",
+      1,
+      8
+    ],
+    [
+      "frontend/components/layout/palette-switcher.tsx",
+      "a",
+      "ai",
+      1,
+      8
+    ],
+    [
+      "frontend/components/layout/theme-toggle.tsx",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/components/layout/breadcrumbs.tsx",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/components/layout/nav-user.tsx",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/components/layout/header.tsx",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/components/layout/app-sidebar.tsx",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/dashboard/layout.tsx",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/dashboard/error.tsx",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/layout.tsx",
+      "m",
+      "ai",
+      2,
+      0
+    ]
+  ],
+  "sum": {
+    "files": 10,
+    "add": 9,
+    "mod": 1,
+    "del": 0,
+    "src": {
+      "ai": 10
+    }
+  },
+  "warn": {
+    "quarantine": 0,
+    "halluc": 0,
+    "secret": 0,
+    "runtime": 2,
+    "override": false
+  },
+  "safety": {
+    "canary": "8/8",
+    "vault": "persistent"
+  },
+  "base": {
+    "gen": 2,
+    "anc": "T",
+    "race": 0
+  },
+  "verify": 1,
+  "ms": 8863,
+  "hash": "c98063615ab9ab36"
+}
