@@ -1,0 +1,133 @@
+{
+  "v": 2,
+  "id": "zc_mwhumu79_0rtl",
+  "sid": "s_mwhthbob_emnp",
+  "repo": "saadcnx/management_system",
+  "ts": 1794748023889,
+  "sha": "28e68885a6dcc68ce514394a4e560be5cbd5ed20",
+  "branch": "main",
+  "delivery": "direct",
+  "msgSubj": "feat(sync): Synchronized 13 file(s) across 3 prompt turn(s)",
+  "msgHash": "3ad04bd477fcad21",
+  "files": [
+    [
+      "backend/package.json",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/vitest.config.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/test/setup.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/test/helpers.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/middleware/rateLimiter.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/modules/auth/auth.routes.ts",
+      "m",
+      "ai",
+      3,
+      0
+    ],
+    [
+      "backend/src/index.ts",
+      "m",
+      "ai",
+      3,
+      0
+    ],
+    [
+      "backend/src/scripts/seed.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/.env.example",
+      "m",
+      "ai",
+      3,
+      0
+    ],
+    [
+      "frontend/app/dashboard/loading.tsx",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/login/page.tsx",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/globals.css",
+      "m",
+      "ai",
+      3,
+      0
+    ],
+    [
+      "README.md",
+      "m",
+      "ai",
+      1,
+      0
+    ]
+  ],
+  "sum": {
+    "files": 13,
+    "add": 0,
+    "mod": 13,
+    "del": 0,
+    "src": {
+      "ai": 13
+    }
+  },
+  "warn": {
+    "quarantine": 0,
+    "halluc": 0,
+    "secret": 0,
+    "runtime": 0,
+    "override": false
+  },
+  "safety": {
+    "canary": "8/8",
+    "vault": "persistent"
+  },
+  "base": {
+    "gen": 2,
+    "anc": "T",
+    "race": 0
+  },
+  "verify": 1,
+  "ms": 10200,
+  "hash": "6b11a2db15223020"
+}
