@@ -54,3 +54,36 @@ describe('tenancy and roles', () => {
     expect(labs.status).toBe(403);
   });
 });
+
+describe('lab workflow', () => {
+  it('takes an order from catalog to verified and paid', async () => {
+    const a = await createLabWithAdmin('wf');
+    const c = authCookie(String(a.admin._id));
+    const pat = await request(app).post('/api/patients').set('Cookie', c).send(patient);
+    const t = await request(app)
+      .post('/api/tests')
+      .set('Cookie', c)
+      .send({ name: 'Hemoglobin', code: 'hb', sampleType: 'Blood', unit: 'g/dL', price: 500, refMin: 12, refMax: 16 });
+    expect(t.status).toBe(201);
+    const o = await request(app)
+      .post('/api/orders')
+      .set('Cookie', c)
+      .send({ patientId: pat.body.data._id, testIds: [t.body.data._id], discount: 100 });
+    expect(o.status).toBe(201);
+    expect(o.body.data.orderNumber).toBe('ORD-0001');
+    expect(o.body.data.total).toBe(400);
+    const id = o.body.data._id;
+    const collected = await request(app).patch(`/api/orders/${id}/collect`).set('Cookie', c);
+    expect(collected.status).toBe(200);
+    const r = await request(app)
+      .patch(`/api/orders/${id}/results`)
+      .set('Cookie', c)
+      .send({ results: [{ itemId: o.body.data.items[0]._id, result: '18' }] });
+    expect(r.body.data.items[0].flag).toBe('HIGH');
+    expect(r.body.data.status).toBe('RESULTS_ENTERED');
+    const v = await request(app).patch(`/api/orders/${id}/verify`).set('Cookie', c);
+    expect(v.body.data.status).toBe('VERIFIED');
+    const p = await request(app).post(`/api/orders/${id}/payments`).set('Cookie', c).send({ amount: 400, method: 'CASH' });
+    expect(p.body.data.paymentStatus).toBe('PAID');
+  });
+});

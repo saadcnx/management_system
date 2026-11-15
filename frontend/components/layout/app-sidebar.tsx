@@ -1,7 +1,7 @@
 "use client"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { LayoutDashboard, FlaskConical, UserCog, Users, X } from "lucide-react"
+import { LayoutDashboard, FlaskConical, UserCog, Users, X, TestTube, ClipboardList } from "lucide-react"
 import { useSidebar } from "@/components/ui/sidebar"
 import { useUser } from "@/hooks/use-user"
 import { cn } from "@/lib/utils"
@@ -16,14 +16,18 @@ const NAV: Record<string, { label: string; href: string; icon: any }[]> = {
     { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
     { label: "Staff", href: "/dashboard/staff", icon: UserCog },
     { label: "Patients", href: "/dashboard/patients", icon: Users },
+    { label: "Tests", href: "/dashboard/tests", icon: TestTube },
+    { label: "Orders", href: "/dashboard/orders", icon: ClipboardList },
   ],
   DOCTOR: [
     { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
     { label: "Patients", href: "/dashboard/patients", icon: Users },
+    { label: "Orders", href: "/dashboard/orders", icon: ClipboardList },
   ],
   RECEPTIONIST: [
     { label: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
     { label: "Patients", href: "/dashboard/patients", icon: Users },
+    { label: "Orders", href: "/dashboard/orders", icon: ClipboardList },
   ],
 }
 

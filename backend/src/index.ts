@@ -11,6 +11,8 @@ import labRoutes from './modules/lab/lab.routes';
 import userRoutes from './modules/user/user.routes';
 import patientRoutes from './modules/patient/patient.routes';
 import dashboardRoutes from './modules/dashboard/dashboard.routes';
+import testRoutes from './modules/test/test.routes';
+import orderRoutes from './modules/order/order.routes';
 
 export const app = express();
 
@@ -30,6 +32,8 @@ app.use('/api/labs', labRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/patients', patientRoutes);
 app.use('/api/dashboard', dashboardRoutes);
+app.use('/api/tests', testRoutes);
+app.use('/api/orders', orderRoutes);
 
 app.use((_req: Request, res: Response) => {
   res.status(404).json({ success: false, message: 'Not found' });
