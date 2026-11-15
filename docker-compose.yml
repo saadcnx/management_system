@@ -32,7 +32,7 @@ services:
       JWT_REFRESH_SECRET: change-me-refresh-secret
       JWT_ACCESS_EXPIRY: 15m
       JWT_REFRESH_EXPIRY: 7d
-      CORS_ORIGIN: http://localhost:3000
+      CORS_ORIGIN: http://3.107.179.128:3000
       COOKIE_SECURE: "false"
       SEED_SUPER_ADMIN_EMAIL: superadmin@lms.local
       SEED_SUPER_ADMIN_PASSWORD: ChangeMe123!
@@ -48,7 +48,7 @@ services:
     build:
       context: ./frontend
       args:
-        NEXT_PUBLIC_API_URL: http://localhost:5000
+        NEXT_PUBLIC_API_URL: http://3.107.179.128:5000
     container_name: lms-frontend
     restart: unless-stopped
     depends_on:
