@@ -1,0 +1,77 @@
+{
+  "v": 2,
+  "id": "zc_mwhu5w8r_awny",
+  "sid": "s_mwhthbob_emnp",
+  "repo": "saadcnx/management_system",
+  "ts": 1794747233385,
+  "sha": "31c59bab815312b10f155ef32d1c34c22795c0b0",
+  "branch": "main",
+  "delivery": "direct",
+  "msgSubj": "feat(sync): Synchronized 5 file(s) across 2 prompt turn(s)",
+  "msgHash": "4017cc2805ee04ed",
+  "files": [
+    [
+      "backend/src/modules/user/user.controller.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/modules/user/user.routes.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/index.ts",
+      "m",
+      "ai",
+      2,
+      0
+    ],
+    [
+      "frontend/lib/api.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/dashboard/staff/page.tsx",
+      "a",
+      "ai",
+      1,
+      0
+    ]
+  ],
+  "sum": {
+    "files": 5,
+    "add": 3,
+    "mod": 2,
+    "del": 0,
+    "src": {
+      "ai": 5
+    }
+  },
+  "warn": {
+    "quarantine": 0,
+    "halluc": 0,
+    "secret": 0,
+    "runtime": 0,
+    "override": false
+  },
+  "safety": {
+    "canary": "8/8",
+    "vault": "persistent"
+  },
+  "base": {
+    "gen": 2,
+    "anc": "T",
+    "race": 0
+  },
+  "verify": 1,
+  "ms": 5715,
+  "hash": "6552a9cd846fb9c2"
+}
