@@ -1,0 +1,133 @@
+{
+  "v": 2,
+  "id": "zc_mwhu3mg5_2m2b",
+  "sid": "s_mwhthbob_emnp",
+  "repo": "saadcnx/management_system",
+  "ts": 1794747127365,
+  "sha": "6cd06404eefd8df64bf3fc8b30f753da2322ac3b",
+  "branch": "main",
+  "delivery": "direct",
+  "msgSubj": "feat(sync): Synchronized 13 file(s) across 2 prompt turn(s)",
+  "msgHash": "0d7cd23d77fcad21",
+  "files": [
+    [
+      "backend/src/models/Lab.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/middleware/role.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/modules/lab/lab.controller.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/modules/lab/lab.routes.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/index.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/lib/utils.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/components/ui/button.tsx",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/components/ui/input.tsx",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/components/ui/badge.tsx",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/components/ui/select.tsx",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/providers.tsx",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/package.json",
+      "m",
+      "ai",
+      2,
+      0
+    ],
+    [
+      "frontend/app/dashboard/labs/page.tsx",
+      "m",
+      "ai",
+      1,
+      0
+    ]
+  ],
+  "sum": {
+    "files": 13,
+    "add": 0,
+    "mod": 13,
+    "del": 0,
+    "src": {
+      "ai": 13
+    }
+  },
+  "warn": {
+    "quarantine": 0,
+    "halluc": 0,
+    "secret": 0,
+    "runtime": 0,
+    "override": false
+  },
+  "safety": {
+    "canary": "8/8",
+    "vault": "persistent"
+  },
+  "base": {
+    "gen": 2,
+    "anc": "T",
+    "race": 0
+  },
+  "verify": 1,
+  "ms": 8310,
+  "hash": "1dc0e111b4ee4210"
+}
