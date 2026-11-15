@@ -27,10 +27,8 @@ export const getStats = async (req: AuthRequest, res: Response) => {
 
       const months: Date[] = [];
       for (let i = 5; i >= 0; i--) {
-        const d = new Date();
-        d.setMonth(d.getMonth() - i);
-        d.setDate(1);
-        d.setHours(0, 0, 0, 0);
+        const now = new Date();
+        const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth() - i, 1));
         months.push(d);
       }
       const rawLabs = await Lab.aggregate([
@@ -39,7 +37,7 @@ export const getStats = async (req: AuthRequest, res: Response) => {
       ]);
       const labsMap = new Map<string, number>(rawLabs.map((r: any) => [r._id, r.count]));
       const labsChart = months.map((d) => ({
-        label: d.toLocaleDateString('en-US', { month: 'short' }),
+        label: d.toLocaleDateString('en-US', { month: 'short', timeZone: 'UTC' }),
         value: labsMap.get(d.toISOString().slice(0, 7)) || 0,
       }));
 
@@ -101,9 +99,8 @@ export const getStats = async (req: AuthRequest, res: Response) => {
 
     const days: Date[] = [];
     for (let i = 6; i >= 0; i--) {
-      const d = new Date();
-      d.setDate(d.getDate() - i);
-      d.setHours(0, 0, 0, 0);
+      const now = new Date();
+      const d = new Date(Date.UTC(now.getUTCFullYear(), now.getUTCMonth(), now.getUTCDate() - i));
       days.push(d);
     }
     const rawRegs = await Patient.aggregate([
@@ -112,7 +109,7 @@ export const getStats = async (req: AuthRequest, res: Response) => {
     ]);
     const regsMap = new Map<string, number>(rawRegs.map((r: any) => [r._id, r.count]));
     const regsData = days.map((d) => ({
-      label: d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' }),
+      label: d.toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' }),
       value: regsMap.get(d.toISOString().slice(0, 10)) || 0,
     }));
 

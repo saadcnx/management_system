@@ -2,6 +2,7 @@
 import { useEffect, useRef, useState } from "react"
 import { useRouter } from "next/navigation"
 import { LogOut, ChevronDown } from "lucide-react"
+import { useQueryClient } from "@tanstack/react-query"
 import { UserAvatar } from "@/components/ui/user-avatar"
 import { PaletteSwitcher } from "./palette-switcher"
 import { api } from "@/lib/api"
@@ -18,6 +19,7 @@ export function NavUser({ user, collapsed }: { user: any; collapsed: boolean }) 
   const [open, setOpen] = useState(false)
   const ref = useRef<HTMLDivElement>(null)
   const router = useRouter()
+  const queryClient = useQueryClient()
 
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
@@ -29,6 +31,7 @@ export function NavUser({ user, collapsed }: { user: any; collapsed: boolean }) 
 
   const logout = async () => {
     await api.post("/api/auth/logout", {})
+    queryClient.clear()
     router.push("/login")
   }
 

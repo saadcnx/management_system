@@ -1,6 +1,6 @@
 # LMS — Laboratory Management System
 
-Multi-tenant, role-based LMS. Next.js 14 (App Router) + Express 5 + MongoDB.
+Multi-tenant, role-based LMS. Next.js 14 (App Router) + Express 4 + MongoDB.
 
 ## Structure
 

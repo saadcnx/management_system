@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { useQuery, useMutation, useQueryClient, keepPreviousData } from '@tanstack/react-query';
 import { api } from '@/lib/api';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -31,7 +31,8 @@ export default function LabsPage() {
 
   const { data, isLoading } = useQuery({
     queryKey: ['labs', page, search, status],
-    queryFn: () => api.get(`/api/labs?page=${page}&limit=10&search=${search}&status=${status}`),
+    queryFn: () => api.get(`/api/labs?page=${page}&limit=10&search=${encodeURIComponent(search)}&status=${status}`),
+    placeholderData: keepPreviousData,
   });
 
   const createMutation = useMutation({
@@ -49,8 +50,7 @@ export default function LabsPage() {
   });
 
   const onSubmit = (data: LabFormData) => {
-    createMutation.mutate(data);
-    reset();
+    createMutation.mutate(data, { onSuccess: () => reset() });
   };
 
   if (isLoading) return <div className="p-6">Loading...</div>;

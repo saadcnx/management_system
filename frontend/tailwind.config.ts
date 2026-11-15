@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss"
 
+const c = (v: string) => `color-mix(in srgb, var(${v}) calc(<alpha-value> * 100%), transparent)`
+
 const config = {
   darkMode: ["class"],
   content: [
@@ -19,58 +21,58 @@ const config = {
     },
     extend: {
       colors: {
-        border: "var(--border)",
-        input: "var(--input)",
-        ring: "var(--ring)",
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        border: c("--border"),
+        input: c("--input"),
+        ring: c("--ring"),
+        background: c("--background"),
+        foreground: c("--foreground"),
         primary: {
-          DEFAULT: "var(--primary)",
-          foreground: "var(--primary-foreground)",
+          DEFAULT: c("--primary"),
+          foreground: c("--primary-foreground"),
         },
         secondary: {
-          DEFAULT: "var(--secondary)",
-          foreground: "var(--foreground)",
+          DEFAULT: c("--secondary"),
+          foreground: c("--foreground"),
         },
         destructive: {
-          DEFAULT: "var(--destructive)",
-          foreground: "var(--primary-foreground)",
+          DEFAULT: c("--destructive"),
+          foreground: c("--primary-foreground"),
         },
         success: {
-          DEFAULT: "var(--success)",
+          DEFAULT: c("--success"),
         },
         warning: {
-          DEFAULT: "var(--warning)",
+          DEFAULT: c("--warning"),
         },
         muted: {
-          DEFAULT: "var(--muted)",
-          foreground: "var(--muted-foreground)",
+          DEFAULT: c("--muted"),
+          foreground: c("--muted-foreground"),
         },
         accent: {
-          DEFAULT: "var(--accent)",
-          foreground: "var(--accent-foreground)",
+          DEFAULT: c("--accent"),
+          foreground: c("--accent-foreground"),
         },
         popover: {
-          DEFAULT: "var(--popover)",
-          foreground: "var(--foreground)",
+          DEFAULT: c("--popover"),
+          foreground: c("--foreground"),
         },
         card: {
-          DEFAULT: "var(--card)",
-          foreground: "var(--foreground)",
+          DEFAULT: c("--card"),
+          foreground: c("--foreground"),
         },
-        brand: "var(--brand)",
+        brand: c("--brand"),
         sidebar: {
-          DEFAULT: "var(--sidebar)",
-          foreground: "var(--sidebar-foreground)",
-          accent: "var(--sidebar-accent)",
-          border: "var(--sidebar-border)",
+          DEFAULT: c("--sidebar"),
+          foreground: c("--sidebar-foreground"),
+          accent: c("--sidebar-accent"),
+          border: c("--sidebar-border"),
         },
         chart: {
-          "1": "var(--chart-1)",
-          "2": "var(--chart-2)",
-          "3": "var(--chart-3)",
-          "4": "var(--chart-4)",
-          "5": "var(--chart-5)",
+          "1": c("--chart-1"),
+          "2": c("--chart-2"),
+          "3": c("--chart-3"),
+          "4": c("--chart-4"),
+          "5": c("--chart-5"),
         },
       },
       borderRadius: {

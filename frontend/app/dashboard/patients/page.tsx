@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { useQuery, useMutation, useQueryClient, keepPreviousData } from '@tanstack/react-query';
 import { useQueryState, parseAsInteger, parseAsString } from 'nuqs';
 import { api } from '@/lib/api';
@@ -25,7 +25,7 @@ const patientSchema = z.object({
 type PatientFormData = z.infer<typeof patientSchema>;
 type DialogState = null | { type: 'add' } | { type: 'edit'; patient: any } | { type: 'view'; patient: any };
 
-export default function PatientsPage() {
+function PatientsContent() {
   const user = useUser();
   const queryClient = useQueryClient();
   const canEdit = user?.role === 'LAB_ADMIN' || user?.role === 'RECEPTIONIST';
@@ -48,7 +48,7 @@ export default function PatientsPage() {
 
   const { data, isLoading, isFetching } = useQuery({
     queryKey: ['patients', page, search, gender, sortBy],
-    queryFn: () => api.get(`/api/patients?page=${page}&limit=10&search=${search}&gender=${gender}&sortBy=${sortBy}`),
+    queryFn: () => api.get(`/api/patients?page=${page}&limit=10&search=${encodeURIComponent(search)}&gender=${gender}&sortBy=${sortBy}`),
     placeholderData: keepPreviousData,
   });
 
@@ -248,6 +248,14 @@ export default function PatientsPage() {
         </Modal>
       )}
     </div>
+  );
+}
+
+export default function PatientsPage() {
+  return (
+    <Suspense fallback={null}>
+      <PatientsContent />
+    </Suspense>
   );
 }
 

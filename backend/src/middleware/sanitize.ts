@@ -19,6 +19,9 @@ export const sanitize = (req: Request, res: Response, next: NextFunction) => {
   if (req.body && typeof req.body === 'object') {
     req.body = sanitizeValue(req.body);
   }
+  if (req.query && typeof req.query === 'object') {
+    req.query = sanitizeValue(req.query);
+  }
   if (req.params) {
     req.params = sanitizeValue(req.params);
   }

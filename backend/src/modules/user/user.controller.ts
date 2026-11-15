@@ -27,7 +27,7 @@ export const createStaff = async (req: AuthRequest, res: Response) => {
       data: { id: staff._id, name: staff.name, email: staff.email, role: staff.role, isActive: staff.isActive },
     });
   } catch (err: any) {
-    res.status(400).json({ success: false, message: err.message });
+    res.status(400).json({ success: false, message: err.code === 11000 ? 'Email already exists' : err.message });
   }
 };
 

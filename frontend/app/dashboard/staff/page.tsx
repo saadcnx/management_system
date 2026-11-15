@@ -1,6 +1,6 @@
 "use client";
 import { useState } from 'react';
-import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
+import { useQuery, useMutation, useQueryClient, keepPreviousData } from '@tanstack/react-query';
 import { api } from '@/lib/api';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -36,7 +36,8 @@ export default function StaffPage() {
 
   const { data, isLoading } = useQuery({
     queryKey: ['staff', page, search, roleFilter],
-    queryFn: () => api.get(`/api/users/staff?page=${page}&limit=10&search=${search}&role=${roleFilter}`),
+    queryFn: () => api.get(`/api/users/staff?page=${page}&limit=10&search=${encodeURIComponent(search)}&role=${roleFilter}`),
+    placeholderData: keepPreviousData,
   });
 
   const invalidate = () => queryClient.invalidateQueries({ queryKey: ['staff'] });
