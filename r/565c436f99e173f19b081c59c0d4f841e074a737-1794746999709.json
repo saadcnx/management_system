@@ -1,0 +1,147 @@
+{
+  "v": 2,
+  "id": "zc_mwhu0vyk_119z",
+  "sid": "s_mwhthbob_emnp",
+  "repo": "saadcnx/management_system",
+  "ts": 1794746999709,
+  "sha": "565c436f99e173f19b081c59c0d4f841e074a737",
+  "branch": "main",
+  "delivery": "direct",
+  "msgSubj": "feat(sync): Synchronized 15 file(s) across 2 prompt turn(s)",
+  "msgHash": "e42fd79777fcad21",
+  "files": [
+    [
+      "backend/src/models/User.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/models/RefreshToken.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/utils/asyncLocalStorage.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/middleware/tenantPlugin.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/utils/jwt.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/middleware/auth.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/modules/auth/auth.controller.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/modules/auth/auth.routes.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/index.ts",
+      "m",
+      "ai",
+      2,
+      0
+    ],
+    [
+      "frontend/lib/api.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/providers.tsx",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/middleware.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/login/page.tsx",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/dashboard/page.tsx",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/layout.tsx",
+      "m",
+      "ai",
+      2,
+      0
+    ]
+  ],
+  "sum": {
+    "files": 15,
+    "add": 13,
+    "mod": 2,
+    "del": 0,
+    "src": {
+      "ai": 15
+    }
+  },
+  "warn": {
+    "quarantine": 0,
+    "halluc": 0,
+    "secret": 0,
+    "runtime": 0,
+    "override": false
+  },
+  "safety": {
+    "canary": "8/8",
+    "vault": "persistent"
+  },
+  "base": {
+    "gen": 2,
+    "anc": "T",
+    "race": 0
+  },
+  "verify": 1,
+  "ms": 11751,
+  "hash": "6c03634d03d5ae0c"
+}
