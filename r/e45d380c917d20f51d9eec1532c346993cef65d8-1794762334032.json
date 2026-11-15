@@ -1,0 +1,147 @@
+{
+  "v": 2,
+  "id": "zc_mwi35k06_o1rb",
+  "sid": "s_mwi33hz0_1iij",
+  "repo": "saadcnx/management_system",
+  "ts": 1794762334032,
+  "sha": "e45d380c917d20f51d9eec1532c346993cef65d8",
+  "branch": "main",
+  "delivery": "direct",
+  "msgSubj": "feat(sync): Synchronized 15 file(s) across 1 prompt turn(s)",
+  "msgHash": "ec341dfc77fcad21",
+  "files": [
+    [
+      "backend/src/models/Test.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/models/Order.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/modules/test/test.controller.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/modules/test/test.routes.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/modules/order/order.controller.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/modules/order/order.routes.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/index.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/test/api.test.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/components/ui/modal.tsx",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/lib/lab.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/dashboard/tests/page.tsx",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/dashboard/orders/page.tsx",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/dashboard/orders/[id]/page.tsx",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/components/layout/app-sidebar.tsx",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/dashboard/layout.tsx",
+      "m",
+      "ai",
+      1,
+      0
+    ]
+  ],
+  "sum": {
+    "files": 15,
+    "add": 11,
+    "mod": 4,
+    "del": 0,
+    "src": {
+      "ai": 15
+    }
+  },
+  "warn": {
+    "quarantine": 0,
+    "halluc": 0,
+    "secret": 0,
+    "runtime": 0,
+    "override": false
+  },
+  "safety": {
+    "canary": "8/8",
+    "vault": "persistent"
+  },
+  "base": {
+    "gen": 0,
+    "anc": "T",
+    "race": 0
+  },
+  "verify": 1,
+  "ms": 14546,
+  "hash": "0c7e0d46e8825024"
+}
