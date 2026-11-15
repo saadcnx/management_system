@@ -1,0 +1,126 @@
+{
+  "v": 2,
+  "id": "zc_mwhus4ko_51rt",
+  "sid": "s_mwhus4km_dfmq",
+  "repo": "saadcnx/management_system",
+  "ts": 1794748270381,
+  "sha": "ac995e1148ef3cfcbd85fea5c690e49b06da843e",
+  "branch": "main",
+  "delivery": "direct",
+  "msgSubj": "feat(sync): Synchronized 12 file(s) across 1 prompt turn(s)",
+  "msgHash": "64d0b91577fcad21",
+  "files": [
+    [
+      "docker-compose.yml",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/Dockerfile",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/.dockerignore",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/middleware/sanitize.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/package.json",
+      "m",
+      "ai",
+      1,
+      3
+    ],
+    [
+      "backend/src/index.ts",
+      "m",
+      "ai",
+      1,
+      3
+    ],
+    [
+      "backend/src/modules/auth/auth.controller.ts",
+      "m",
+      "ai",
+      1,
+      3
+    ],
+    [
+      "backend/tsconfig.json",
+      "m",
+      "ai",
+      1,
+      1
+    ],
+    [
+      "frontend/Dockerfile",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/.dockerignore",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/next.config.mjs",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/public/.gitkeep",
+      "a",
+      "ai",
+      1,
+      0
+    ]
+  ],
+  "sum": {
+    "files": 12,
+    "add": 7,
+    "mod": 5,
+    "del": 0,
+    "src": {
+      "ai": 12
+    }
+  },
+  "warn": {
+    "quarantine": 4,
+    "halluc": 3,
+    "secret": 0,
+    "runtime": 0,
+    "override": false
+  },
+  "safety": {
+    "canary": "8/8",
+    "vault": "persistent"
+  },
+  "base": {
+    "gen": 0,
+    "anc": "T",
+    "race": 0
+  },
+  "verify": 1,
+  "ms": 9797,
+  "hash": "5e18b90991d152b8"
+}
