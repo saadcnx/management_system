@@ -6,6 +6,7 @@ import dotenv from 'dotenv';
 import { connectDB } from './config/db';
 import { logger } from './utils/logger';
 import authRoutes from './modules/auth/auth.routes';
+import labRoutes from './modules/lab/lab.routes';
 
 dotenv.config();
 
@@ -23,6 +24,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use('/api/auth', authRoutes);
+app.use('/api/labs', labRoutes);
 
 app.get('/health', (req, res) => {
   res.status(200).json({ status: 'ok' });
