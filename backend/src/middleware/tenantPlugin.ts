@@ -2,7 +2,7 @@ import { Schema } from 'mongoose';
 import { tenantContext } from '../utils/asyncLocalStorage';
 
 export function tenantPlugin(schema: Schema) {
-  schema.pre(/^find/, function (next) {
+  schema.pre(/^find/, function (this: any, next: () => void) {
     const store = tenantContext.getStore();
     if (store && store.tenantId) {
       this.where({ tenantId: store.tenantId });
@@ -10,7 +10,7 @@ export function tenantPlugin(schema: Schema) {
     next();
   });
 
-  schema.pre('countDocuments', function (next) {
+  schema.pre('countDocuments', function (this: any, next: () => void) {
     const store = tenantContext.getStore();
     if (store && store.tenantId) {
       this.where({ tenantId: store.tenantId });
@@ -18,10 +18,10 @@ export function tenantPlugin(schema: Schema) {
     next();
   });
 
-  schema.pre('save', function (next) {
+  schema.pre('save', function (this: any, next: () => void) {
     const store = tenantContext.getStore();
-    if (store && store.tenantId && !(this as any).tenantId) {
-      (this as any).tenantId = store.tenantId;
+    if (store && store.tenantId && !this.tenantId) {
+      this.tenantId = store.tenantId;
     }
     next();
   });
