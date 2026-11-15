@@ -1,0 +1,182 @@
+{
+  "v": 2,
+  "id": "zc_mwhvjtzg_v3lr",
+  "sid": "s_mwhvjtze_2gyz",
+  "repo": "saadcnx/management_system",
+  "ts": 1794749563042,
+  "sha": "c33b9c4ff92d1a426e6f7e23faaf4b5eb8b43169",
+  "branch": "main",
+  "delivery": "direct",
+  "msgSubj": "feat(sync): Synchronized 20 file(s) across 2 prompt turn(s)",
+  "msgHash": "87dd669377fcad21",
+  "files": [
+    [
+      "backend/package.json",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/tsconfig.json",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/index.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/modules/auth/auth.controller.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/utils/jwt.ts",
+      "m",
+      "ai",
+      2,
+      0
+    ],
+    [
+      "backend/src/middleware/sanitize.ts",
+      "m",
+      "ai",
+      2,
+      0
+    ],
+    [
+      "backend/src/modules/dashboard/dashboard.controller.ts",
+      "m",
+      "ai",
+      2,
+      0
+    ],
+    [
+      "backend/src/modules/user/user.controller.ts",
+      "m",
+      "ai",
+      2,
+      0
+    ],
+    [
+      "backend/.env.example",
+      "m",
+      "ai",
+      2,
+      0
+    ],
+    [
+      "backend/src/test/api.test.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "README.md",
+      "m",
+      "ai",
+      2,
+      0
+    ],
+    [
+      "frontend/lib/api.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/page.tsx",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/providers.tsx",
+      "m",
+      "ai",
+      2,
+      0
+    ],
+    [
+      "frontend/app/login/page.tsx",
+      "m",
+      "ai",
+      2,
+      0
+    ],
+    [
+      "frontend/components/layout/nav-user.tsx",
+      "m",
+      "ai",
+      2,
+      0
+    ],
+    [
+      "frontend/app/dashboard/labs/page.tsx",
+      "m",
+      "ai",
+      2,
+      0
+    ],
+    [
+      "frontend/app/dashboard/staff/page.tsx",
+      "m",
+      "ai",
+      2,
+      0
+    ],
+    [
+      "frontend/app/dashboard/patients/page.tsx",
+      "m",
+      "ai",
+      2,
+      0
+    ],
+    [
+      "frontend/tailwind.config.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ]
+  ],
+  "sum": {
+    "files": 20,
+    "add": 1,
+    "mod": 19,
+    "del": 0,
+    "src": {
+      "ai": 20
+    }
+  },
+  "warn": {
+    "quarantine": 0,
+    "halluc": 0,
+    "secret": 0,
+    "runtime": 0,
+    "override": false
+  },
+  "safety": {
+    "canary": "8/8",
+    "vault": "persistent"
+  },
+  "base": {
+    "gen": 0,
+    "anc": "T",
+    "race": 0
+  },
+  "verify": 1,
+  "ms": 10272,
+  "hash": "b9316318b0ced796"
+}
