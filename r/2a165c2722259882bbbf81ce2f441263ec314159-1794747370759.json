@@ -1,0 +1,105 @@
+{
+  "v": 2,
+  "id": "zc_mwhu8u9o_qulk",
+  "sid": "s_mwhthbob_emnp",
+  "repo": "saadcnx/management_system",
+  "ts": 1794747370759,
+  "sha": "2a165c2722259882bbbf81ce2f441263ec314159",
+  "branch": "main",
+  "delivery": "direct",
+  "msgSubj": "feat(sync): Synchronized 9 file(s) across 1 prompt turn(s)",
+  "msgHash": "a922b37f1a3e33ae",
+  "files": [
+    [
+      "backend/src/models/Patient.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/models/Counter.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/modules/patient/patient.controller.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/modules/patient/patient.routes.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "backend/src/index.ts",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/providers.tsx",
+      "m",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/hooks/use-debounce.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/hooks/use-user.ts",
+      "a",
+      "ai",
+      1,
+      0
+    ],
+    [
+      "frontend/app/dashboard/patients/page.tsx",
+      "a",
+      "ai",
+      1,
+      0
+    ]
+  ],
+  "sum": {
+    "files": 9,
+    "add": 7,
+    "mod": 2,
+    "del": 0,
+    "src": {
+      "ai": 9
+    }
+  },
+  "warn": {
+    "quarantine": 0,
+    "halluc": 0,
+    "secret": 0,
+    "runtime": 0,
+    "override": false
+  },
+  "safety": {
+    "canary": "8/8",
+    "vault": "persistent"
+  },
+  "base": {
+    "gen": 2,
+    "anc": "T",
+    "race": 0
+  },
+  "verify": 1,
+  "ms": 7862,
+  "hash": "08a560f26c123676"
+}
